@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A little something to make you smile everyday ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>A Special Quote For My Audri 💖</h1>
+    <div id="quote-box">
+      <p id="quote">Loading...</p>
+      <p id="author"></p>
+    </div>
+    <button onclick="showRandomQuote()">Show Another Quote</button>
+  </div>
+  <script src="quotes.js"></script>
+  <script>
+    function showRandomQuote() {
+      const quoteData = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById("quote").textContent = `"${quoteData.quote}"`;
+      document.getElementById("author").textContent = `— ${quoteData.author}`;
+    }
+    showRandomQuote();
+  </script>
+</body>
+</html>
